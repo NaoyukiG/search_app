@@ -15,6 +15,9 @@
       <td><%= @item.price%></td>
     </tr>
     <tr>
+      <td>出品者</td>
+      <td><%= @item.user.nickname%></td>
+    </tr>
   </table>
   <% if user_signed_in? && current_user.id == @item.user_id%>
     <%= link_to '編集', edit_item_path(@item.id)%>
